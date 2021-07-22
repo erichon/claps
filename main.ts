@@ -21,13 +21,7 @@ basic.forever(function () {
     if (input.soundLevel() > 80) {
         if (toggle == false) {
             pins.digitalWritePin(DigitalPin.P0, 1)
-            basic.showLeds(`
-                # # # # #
-                # # # # #
-                # # # # #
-                # # # # #
-                # # # # #
-                `)
+            basic.showIcon(IconNames.Heart)
             toggle = true
         } else {
             basic.showLeds(`
